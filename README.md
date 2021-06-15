@@ -14,8 +14,10 @@ In the MT-DNN repo, there is are script for preprocessing the data for the model
 
 ### TO DO
 Scripts for preparing data for the ukp-top model.
+
 interpretatbility scripts and topic word analysis scripts.
 
+add references.
 
 
 
