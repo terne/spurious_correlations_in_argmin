@@ -1,0 +1,151 @@
+UKP:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 3
+  task_type: Classification
+  split_names:
+    - train
+    - test
+    - dev
+    - heldout_test
+  labels: # optional when your labels are int or float
+    - NoArgument
+    - Argument_against
+    - Argument_for
+IBMdebaterArgSearch-PremiseOnly:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 2
+  task_type: Classification
+ArgumentQuality:
+  data_format: PremiseOnly
+  n_class: 1
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - Pearson
+  - Spearman
+  loss: MseCriterion
+  task_type: Regression
+SmallDIP:
+  data_format: PremiseAndOneHypothesis
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: true
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 2
+  task_type: Classification
+  labels: # optional when your labels are int or float
+    - "true"
+    - "false"
+VaccinationCorpusClaims:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 2
+  task_type: Classification
+UNKUKP:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 3
+  task_type: Classification
+  split_names:
+    - train
+    - test
+    - dev
+    - heldout_test
+  labels: # optional when your labels are int or float
+    - NoArgument
+    - Argument_against
+    - Argument_for
+UNKArgumentQuality:
+  data_format: PremiseOnly
+  n_class: 1
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+  - Pearson
+  - Spearman
+  loss: MseCriterion
+  task_type: Regression
+UNKVaccinationCorpusClaims:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 2
+  task_type: Classification
+UNKtop10topicdependentincludedUKP:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 3
+  task_type: Classification
+  split_names:
+    - train
+    - test
+    - dev
+    - heldout_test
+  #  - heldout_dev
+  labels: # optional when your labels are int or float
+    - NoArgument
+    - Argument_against
+    - Argument_for
+UNKcommonContentWordsUKP:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 3
+  task_type: Classification
+  split_names:
+    - train
+    - test
+    - dev
+    - heldout_test
+    #- heldout_dev
+  labels: # optional when your labels are int or float
+    - NoArgument
+    - Argument_against
+    - Argument_for

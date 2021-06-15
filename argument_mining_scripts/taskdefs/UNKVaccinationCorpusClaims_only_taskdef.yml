@@ -1,0 +1,11 @@
+UNKVaccinationCorpusClaims:
+  data_format: PremiseOnly
+  encoder_type: BERT
+  dropout_p: 0.05
+  enable_san: false
+  metric_meta:
+    - ACC
+  loss: CeCriterion
+  kd_loss: MseCriterion
+  n_class: 2
+  task_type: Classification
