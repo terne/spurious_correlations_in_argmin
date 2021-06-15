@@ -2,11 +2,20 @@
 
 1) Request UKP data from Stab et al. (2018) and save the files in the argument_mining_data/ArgMin folder. Then run the the bash script save_ukp_files.sh. The other three datasets are already prepared for you in the tabulated formats ready for MT-DNN (folder names). 
 
-2) Clone the MT-DNN repo: ... (version or my copy?)
+2) Clone the MT-DNN repository and place it beside (not within) this repository: ... 
 
-In the MT-DNN repo, there is are script for preprocessing the data for the model, called prepro_std.py. This script except tab separated data and a task definition in a YAML file. If you followed the steps above, the data should be ready for preprocessing. All the task definitions used in this study are found in the folder argument_mining_scripts/taskdefs.
+In the MT-DNN repo, there is are script for preprocessing the data for the model, called prepro_std.py. This script expect tab separated data and a task definition in a YAML file. If you followed the steps above, the data should be ready for preprocessing.  All the task definitions used in this study are found in the folder argument_mining_scripts/taskdefs. We already provided the preprocessed auxiliary data for you, so you only need the preprocess the UKP data: 
+
+3) Run prepro.sh [path to repo]. For example, if you placed this repository and the MT-DNN repository in the /home/user then write in the terminal: sh prepro.sh /home/user
+
+4) Use unkdata_gen.sh [path to repo] to prepare the UKP data with open-class words replaced by unknown tokens. 
+
+5) Now you are ready to train and test models. To train and test the single-task models, you can use the scripts in the ST folder, and to train and test the multi-task model, you can use the scripts in the MT folder. Again, pass the path to the repositories as an argument to the shell scripts.
+
+### TO DO
+Scripts for preparing data for the ukp-top model.
+interpretatbility scripts and topic word analysis scripts.
 
 
 
-Use unkdata_gen.sh to prepare the UKP data with open-class words replaced by unknown tokens. Replace the path to the mt-dnn/prepro_std.py script with your path (i.e. where you placed the MT-DNN repo).
 
