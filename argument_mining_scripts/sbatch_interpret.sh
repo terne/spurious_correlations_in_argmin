@@ -1,0 +1,62 @@
+#!/bin/bash
+#SBATCH --job-name=interpret
+#SBATCH --ntasks=1 --cpus-per-task=6 --mem=32GB
+#SBATCH -p gpu --gres=gpu:titanx:1
+#SBATCH --time=4-00:00:00
+
+path="$1"
+
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/abortion/2018/model_9.pt" --unprep_dev_data "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/abortion/2018/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/abortion/2018/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/abortion/2018/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/abortion/2018/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/gun_control/2018/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/gun_control/2018/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/gun_control/2018/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/gun_control/2018/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/gun_control/2018/model_9.pt"
+
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/gun_control/42/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/gun_control/42/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/gun_control/42/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/abortion/42/model_9.pt" --unprep_dev_data "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/abortion/42/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/abortion/42/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/abortion/42/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/gun_control/42/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/gun_control/42/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/abortion/42/model_9.pt"
+
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/abortion/4/model_9.pt" --unprep_dev_data "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/abortion/4/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/abortion/4/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/abortion/4/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/abortion/4/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/gun_control/4/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/gun_control/4/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/gun_control/4/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/gun_control/4/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/gun_control/4/model_9.pt"
+
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/abortion/8/model_9.pt" --unprep_dev_data "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/abortion/8/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/abortion/8/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/abortion/8/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/abortion/8/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/gun_control/8/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/gun_control/8/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/gun_control/8/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/gun_control/8/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/gun_control/8/model_9.pt"
+
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/abortion/1/model_9.pt" --unprep_dev_data "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/abortion/1/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/abortion/1/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/abortion/1/model_9.pt" --unprep_dev_data  "$path/spurious_correlations_in_argmin/argument_mining_data/UKPArgMin/abortion/UKP_dev.tsv"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/abortion/1/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/gun_control/1/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/IBM_argsearch_UKP_MTL/gun_control/1/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/DIP_UKP_MTL/gun_control/1/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_IBM_UKP_MTL/gun_control/1/model_9.pt"
+python3 $path/mt-dnn/interpretability.py --cuda True --checkpoint "$path/spurious_correlations_in_argmin/argument_mining_output/ArgumentQuality_UKP_MTL/gun_control/1/model_9.pt"
