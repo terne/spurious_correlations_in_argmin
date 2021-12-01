@@ -1,6 +1,10 @@
 # Spurious Correlations in Cross-Topic Argument Mining
 
+Please cite our paper if using this repository: Thorn Jakobsen, T., Barrett, M., & Søgaard, A. (2021). Spurious Correlations in Cross-Topic Argument Mining. STARSEM. https://aclanthology.org/2021.starsem-1.25/ 
 
+&nbsp; 
+
+### Reproduce the experiments
 1) Request UKP data from Stab et al. (2018) and save the files in the argument_mining_data/ArgMin folder. Then run the the bash script save_ukp_files.sh. The other three datasets are already prepared for you in the tabulated formats ready for MT-DNN (folder names). 
 
 2) Clone the MT-DNN repository from https://github.com/terne/mt-dnn.git and place it beside (not within) this repository.
@@ -20,9 +24,6 @@ After the above steps, you can reproduce the experiments made with LIME by runni
 ### TO DO
 Scripts for preparing data for the ukp-top model.
 
-topic word analysis scripts.
-
-add references.
 
 
 
